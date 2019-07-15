@@ -1,0 +1,1 @@
+INDEX VERSION 1.131+/root/visa_frameworks/.metadata/.plugins/org.eclipse.jdt.core

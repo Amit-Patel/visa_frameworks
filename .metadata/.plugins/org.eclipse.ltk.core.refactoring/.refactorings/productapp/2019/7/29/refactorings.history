@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 3 packages to &apos;productapp/src/main/java&apos;&#x0A;- Original project: &apos;productapp&apos;&#x0A;- Destination element: &apos;productapp/src/main/java&apos;&#x0A;- Original elements:&#x0A;     productapp/src/test/java/com.visa.prj.entity&#x0A;     productapp/src/test/java/com.visa.prj.dao&#x0A;     productapp/src/test/java/com.visa.prj.client&#x0A;- Update references to refactored element" description="Move packages" destination="/src\/main\/java" element1="/src\/test\/java&lt;com.visa.prj.entity" element2="/src\/test\/java&lt;com.visa.prj.dao" element3="/src\/test\/java&lt;com.visa.prj.client" flags="589830" fragments="3" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1563187999591" version="1.0"/>
+</session>

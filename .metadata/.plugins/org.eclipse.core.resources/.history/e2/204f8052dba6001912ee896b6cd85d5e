@@ -1,0 +1,43 @@
+package com.visa.prj.dao;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.visa.prj.entity.Product;
+
+public class ProductDaoJdbcImpl implements ProductDao{
+
+	@Override
+	public int addProduct(Product p) throws PersistenceException {
+		return 0;
+	}
+
+	@Override
+	public List<Product> getProducts() throws FetchException {
+		List<Product> products = new ArrayList<>();
+		String SQL = "select * from products";
+		Connection con = null;
+		
+		try {
+			con = DbUtil.getConnection();
+			Statement stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery(SQL);
+			while(rs.next()) {
+				products.add(new Product(rs.getInt("id"),
+						rs.getString("name"), 
+						rs.getString("category"),
+						rs.getDouble("price"),
+						rs.getInt("count")));
+			}
+			
+		} catch(SQLException ex) {
+			throw new FetchException("unable to get products",ex);
+		}
+	}
+
+	
+}

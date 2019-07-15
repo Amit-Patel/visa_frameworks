@@ -1,0 +1,10 @@
+package com.visa.prj.dao;
+
+public class DbUtil {
+
+	private static String DRIVER = "com.mysql.jdbc.Driver";
+	private static String URL = "jdbc.mysql://localhost:3306/visa_db";
+	private static String USER = "root";
+	private static String PWD = "root";
+	
+}
