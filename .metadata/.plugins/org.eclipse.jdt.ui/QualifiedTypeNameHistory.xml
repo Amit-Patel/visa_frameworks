@@ -5,7 +5,6 @@
 <fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="java.sql.Statement"/>
 <fullyQualifiedTypeName name="com.visa.prj.dao.ProductDao"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.visa.prj.dao.FetchException"/>
 <fullyQualifiedTypeName name="com.visa.prj.dao.DbUtil"/>
 <fullyQualifiedTypeName name="com.mysql.jdbc.PreparedStatement"/>
@@ -13,4 +12,18 @@
 <fullyQualifiedTypeName name="com.visa.prj.dao.ProductDaoJdbcImpl"/>
 <fullyQualifiedTypeName name="com.visa.prj.dao.PersistenceException"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="javax.transaction.Transactional"/>
+<fullyQualifiedTypeName name="com.visa.prj.entity.Actor"/>
+<fullyQualifiedTypeName name="com.visa.prj.entity.Movie"/>
+<fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="javax.persistence.Table"/>
+<fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
+<fullyQualifiedTypeName name="com.visa.prj.dao.BookingDao"/>
+<fullyQualifiedTypeName name="javax.persistence.criteria.Order"/>
+<fullyQualifiedTypeName name="com.visa.prj.entity.User"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>
