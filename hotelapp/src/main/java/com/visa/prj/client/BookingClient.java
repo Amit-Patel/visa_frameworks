@@ -22,15 +22,15 @@ public class BookingClient {
 		
 		User u = new User();
 		u.setEmail("a@visa.com");
-		u.setEnabled(true);
-		u.setName("firstuser");
+//		u.setEnabled(true);
+//		u.setName("firstuser");
 		u.setPassword("root");
 		u.setUsername("first1");
 		
 		BookingService service = ctx.getBean("bookingService", BookingService.class);
-		Hotel h = service.getHotelByName("West");
+		Hotel h = service.getHotelByName("West").get(0);
 
-		SimpleDateFormat formatter = new SimpleDateFormat("dd/mm/yyyy"); 
+		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy"); 
 		Date checkin = new Date();
 		try {
 			checkin = formatter.parse("20/07/2019");
@@ -46,7 +46,7 @@ public class BookingClient {
 		Boolean smoking = false;
 		int no_of_beds = 3;
 		
-		service.makeBooking(u, h, checkin, checkout, smoking, no_of_beds);
+		service.makeBooking(u.getEmail(),u.getPassword(), h.getId(), checkin, checkout, smoking, no_of_beds);
 		
 		List<Booking> bk = service.getAllBookingsByUser(u);
 		for (Booking booking : bk) {

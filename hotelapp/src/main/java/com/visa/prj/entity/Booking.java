@@ -23,9 +23,6 @@ import javax.persistence.TemporalType;
 @Table(name="bookings")
 public class Booking implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -899456379957352658L;
 
 	private static DateFormat dateFormat = DateFormat

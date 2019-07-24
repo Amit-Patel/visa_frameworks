@@ -16,8 +16,8 @@
 ${hotel.city}, ${hotel.state}, ${hotel.zip} <br />
 ${hotel.country}</address>
 <p>Rate: ${hotel.price }</p>
-<form:form action="booking.action" method="get" commandName="booking">
-		<form:hidden id="hotel.id" path="hotel.id" />
+<form:form action="bookingForm.do" method="get" commandName="hotel">
+		<form:hidden id="id" path="id" />
 		<table>
 		<tr>
 			<td colspan="2">

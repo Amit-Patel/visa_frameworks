@@ -13,7 +13,7 @@
 <body>
 <h1>Search Hotels</h1>
 
-<form:form modelAttribute="searchCriteria" action="hotels.action" method="get" cssClass="inline">
+<form:form commandName="searchCriteria" action="hotels.do" method="get" cssClass="inline">
     <span class="errors span-18">
     	<form:errors path="*"/>
     </span>

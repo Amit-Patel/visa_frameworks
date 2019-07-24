@@ -23,8 +23,8 @@ public class BookingService {
 		return bookingDao.getAllBookingsOfUser(user);
 	}
 	
-	public Hotel getHotelByName(String hotel_name) {
-		return bookingDao.findHotels(hotel_name).get(0);
+	public List<Hotel> getHotelByName(String hotelName) {
+		return bookingDao.findHotels(hotelName);
 	}
 	
 	public Hotel getHotelById(long id) {
@@ -36,14 +36,16 @@ public class BookingService {
 	}
 	
 	@Transactional
-	public void makeBooking(User u, Hotel h, Date checkin, Date checkout, Boolean smoking, int no_of_beds) {
-		u = getUser(u.getEmail(), u.getPassword());
-		h = getHotelById(h.getId());
-		Booking b = new Booking(h,u);
+	public void makeBooking(String email, String password, long id, Date checkin, Date checkout, Boolean smoking, int noOfBeds) {
+		User u = getUser(email, password);
+		Hotel h = getHotelById(id);
+		Booking b = new Booking();
+		b.setUser(u);
+		b.setHotel(h);
 		b.setCheckinDate(checkin);
 		b.setCheckoutDate(checkout);
 		b.setSmoking(smoking);
-		b.setBeds(no_of_beds);
+		b.setBeds(noOfBeds);
 		bookingDao.createBooking(b);
 	}
 

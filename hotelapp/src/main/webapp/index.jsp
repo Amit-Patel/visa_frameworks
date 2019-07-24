@@ -12,7 +12,7 @@
 <div>
     <h1>Welcome to Hotel booking application</h1>
     <p>
-        <a href="search.action">Search hotels</a>
+        <a href="search.do">Search hotels</a>
     </p>
 </div>
 

@@ -12,7 +12,7 @@
 <body>
 <h1>Hotel Search Results</h1>
 <p><a id="changeSearchLink"
-	href="search.action?searchString=${searchCriteria.searchString}&pageSize=${searchCriteria.pageSize}">Change
+	href="search.do?searchString=${searchCriteria.searchString}&pageSize=${searchCriteria.pageSize}">Change
 Search</a></p>
 <div id="hotelResults"><c:if test="${not empty hotelList}">
 	<table class="summary">
@@ -32,7 +32,7 @@ Search</a></p>
 					<td>${hotel.address}</td>
 					<td>${hotel.city}, ${hotel.state}, ${hotel.country}</td>
 					<td>${hotel.zip}</td>
-					<td><a href="viewHotel.action?id=${hotel.id}">View Hotel</a></td>
+					<td><a href="viewHotel.do?id=${hotel.id}">View Hotel</a></td>
 				</tr>
 			</c:forEach>
 			<c:if test="${empty hotelList}">
