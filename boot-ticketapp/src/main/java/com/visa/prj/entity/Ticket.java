@@ -107,9 +107,8 @@ public class Ticket {
 		return raisedDate;
 	}
 
-	public void setRaisedDate() {
-		Calendar calendar = Calendar.getInstance();
-		this.raisedDate = calendar.getTime();
+	public void setRaisedDate(Date raisedDate) {
+		this.raisedDate = raisedDate;
 	}
 
 	public Employee getRaisedBy() {

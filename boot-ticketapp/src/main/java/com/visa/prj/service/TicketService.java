@@ -23,7 +23,8 @@ public class TicketService {
 	private TicketDao ticketDao;
 	
 	public int logTicket(Ticket t) {
-		t.setRaisedDate();
+		Calendar calendar = Calendar.getInstance();
+//		t.setRaisedDate(calendar.getTime());
 		ticketDao.save(t);
 		return t.getTicketID();
 	}
@@ -40,8 +41,9 @@ public class TicketService {
 	}
 	
 	@Transactional
-	public int resolveTicket(Integer tid, Employee e) {
-		
+	public int resolveTicket(Integer tid, String email) {
+		Employee e = new Employee();
+		e = getEmployeeByEmail(email);
 		if(!("IT".equals(e.getDept()))) {
 			return -1;
 		}

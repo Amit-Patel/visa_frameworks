@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.visa.prj.entity.Employee;
 import com.visa.prj.entity.Ticket;
 import com.visa.prj.service.TicketService;
 
@@ -30,7 +29,7 @@ public class TicketController {
 	}
 	
 	@PostMapping("tickets/{id}")
-	public Integer resolveTicket(@PathVariable("id") Integer id, @RequestBody Employee e) {
-		return service.resolveTicket(id, e);
+	public Integer resolveTicket(@PathVariable("id") Integer id, @RequestBody String email) {
+		return service.resolveTicket(id, email);
 	}
 }
