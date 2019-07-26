@@ -70,6 +70,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/root/visa_frameworks/security-demo"/>
 			<item value="/root/Downloads/boot-hotelapp"/>
 		</list>
 		<list key="projectNameTemplate">
